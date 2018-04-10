@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<assembly>
+    <id>plugin</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>elasticsearch/</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <excludes>
+                <exclude>org.elasticsearch:elasticsearch</exclude>
+            </excludes>
+        </dependencySet>
+        <dependencySet>
+            <outputDirectory>elasticsearch/</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <includes>
+                <include>org.slf4j:slf4j-api</include>
+                <include>org.slf4j:slf4j-simple</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+    <files>
+        <file>
+            <source>plugin-descriptor.properties</source>
+            <outputDirectory>elasticsearch/</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+    </files>
+</assembly>
