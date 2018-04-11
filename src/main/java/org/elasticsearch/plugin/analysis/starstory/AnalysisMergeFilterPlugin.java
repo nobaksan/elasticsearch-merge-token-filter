@@ -17,7 +17,7 @@ public class AnalysisMergeFilterPlugin extends Plugin implements AnalysisPlugin 
     @Override
     public Map<String, AnalysisModule.AnalysisProvider<TokenFilterFactory>> getTokenFilters() {
         Map<String, AnalysisModule.AnalysisProvider<org.elasticsearch.index.analysis.TokenFilterFactory>> extra = new HashMap<>();
-        extra.put("mergeFilter", MergeTokenFilterFactory::new);
+        extra.put("merge_token_filter", MergeTokenFilterFactory::new);
 
         return extra;
     }
